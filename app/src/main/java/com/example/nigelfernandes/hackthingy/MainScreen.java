@@ -1,16 +1,22 @@
 package com.example.nigelfernandes.hackthingy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.thalmic.myo.Hub;
+import com.thalmic.myo.scanner.ScanActivity;
+
 public class MainScreen extends AppCompatActivity {
 
+    private static final String TAG ="MainScreen";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +32,18 @@ public class MainScreen extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        Hub hub = Hub.getInstance();
+        if (!hub.init(this)) {
+            Log.e(TAG, "Could not initialize the Hub.");
+            finish();
+            return;
+        }
+
+        Intent intent = new Intent(this, ScanActivity.class);
+        this.startActivity(intent);
+
     }
 
     @Override
