@@ -22,7 +22,7 @@ android {
 dependencies {
     repositories {
         maven {
-            url 'C:\\Users\\NigelFernandes\\Downloads\\myorepository'
+            url 'libs/myorepository'
         }
     }
     compile fileTree(dir: 'libs', include: ['*.jar'])

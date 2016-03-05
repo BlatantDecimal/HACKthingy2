@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hackathon.iml" filepath="$PROJECT_DIR$/hackathon.iml" />
+=======
       <module fileurl="file://$PROJECT_DIR$/HACKthingy2.iml" filepath="$PROJECT_DIR$/HACKthingy2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+>>>>>>> 6e90b93ddb091e698c772d0c3d7df31b93e6a29a
     </modules>
   </component>
 </project>
